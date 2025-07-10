@@ -12,7 +12,7 @@ public class CountDownLatchDemo {
     for(int i = 1; i <= 5; i++) {
       new Thread(() -> {
         try {
-          Thread.sleep(ThreadLocalRandom.current().nextInt(1000, 5000));
+          Thread.sleep(ThreadLocalRandom.current().nextInt(1_000, 5_000));
           System.out.println(Thread.currentThread().getName() + " finished it's task");
         } catch (InterruptedException e) {
           Thread.currentThread().interrupt();
