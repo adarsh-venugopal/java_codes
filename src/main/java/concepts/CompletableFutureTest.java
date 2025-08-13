@@ -7,11 +7,13 @@ public class CompletableFutureTest {
 
   public static void main(String[] args) {
     CompletableFuture<String> task1 = CompletableFuture.supplyAsync(() -> {
-      return "Task 1 complete";
-//      throw new RuntimeException("Error inside of task 1");
+      System.out.println("Inside of task 1");
+//      return "Task 1 complete";
+      throw new RuntimeException("Error inside of task 1");
     });
 
     CompletableFuture<String> task2 = CompletableFuture.supplyAsync(() -> {
+      System.out.println("Inside of task 2");
       return "Task 2 complete";
 //      throw new RuntimeException("Error inside of task 2");
     });
