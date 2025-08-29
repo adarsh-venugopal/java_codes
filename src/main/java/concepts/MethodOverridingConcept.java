@@ -10,7 +10,7 @@ public class MethodOverridingConcept {
 }
 
 class Parent {
-  void myFunc() {
+  void myFunc() throws NullPointerException {
     System.out.println("Parent's myFunc");
   }
 }
@@ -32,5 +32,11 @@ class Child extends Parent {
 
   void myFunc() {
     System.out.println("Child's myFunc");
+  }
+}
+
+class AnotherChild extends Parent {
+  void myFunc() {
+    System.out.println("AnotherChild's myFunc");
   }
 }
