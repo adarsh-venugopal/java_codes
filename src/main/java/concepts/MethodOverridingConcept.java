@@ -4,13 +4,13 @@ public class MethodOverridingConcept {
 
   public static void main(String[] args) {
     System.out.println("Hello, World!");
-    new Parent().myFunc();
+    //new Parent().myFunc();
     new Child().myFunc();
   }
 }
 
 class Parent {
-  void myFunc() throws NullPointerException {
+  void myFunc() throws Exception {
     System.out.println("Parent's myFunc");
   }
 }
